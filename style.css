@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+body {
+	background: linear-gradient(135deg, #1a1a2e, #16213e);
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+}
+
+.kotak {
+	width: 90%;
+	max-width: 900px;
+	background: rgba(255, 255, 255, 0.08);
+	backdrop-filter: blur(10px);
+	border-radius: 20px;
+	padding: 30px;
+	box-shadow: 0 0 30px rgba(255, 105, 180, 0.25);
+	animation: fadeIn 1.2s ease;
+}
+
+.h1 {
+	text-align: center;
+	font-size: 36px;
+	color: #ff79c6;
+	letter-spacing: 3px;
+	text-shadow: 0 0 10px rgba(255, 121, 198, 0.8);
+	margin-bottom: 30px;
+}
+
+.blok {
+	background: rgba(0, 0, 0, 0.35);
+	border-radius: 16px;
+	padding: 20px;
+	margin-bottom: 25px;
+	box-shadow: 0 0 15px rgba(0, 255, 255, 0.15);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blok:hover {
+	transform: translateY(-6px);
+	box-shadow: 0 0 25px rgba(0, 255, 255, 0.4);
+}
+
+.blok h2 {
+	color: #00f5ff;
+	margin-bottom: 15px;
+	border-left: 5px solid #ff79c6;
+	padding-left: 12px;
+}
+
+.kiri {
+	float: left;
+	width: 30%;
+	text-align: center;
+}
+
+.kiri img {
+	width: 150px;
+	height: 150px;
+	object-fit: cover;
+	border-radius: 50%;
+	border: 4px solid #ff79c6;
+	box-shadow: 0 0 20px rgba(255, 121, 198, 0.9);
+	animation: float 3s ease-in-out infinite;
+}
+
+.kanan {
+	float: right;
+	width: 65%;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+table th {
+	text-align: left;
+	font-weight: 500;
+	color: #ffb6ff;
+	padding: 6px 0;
+	width: 35%;
+}
+
+table td {
+	color: #ffffff;
+	padding: 6px 0;
+}
+
+.blok::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+ul {
+	padding-left: 20px;
+}
+
+ul li {
+	margin-bottom: 8px;
+	position: relative;
+	color: #f1f1f1;
+}
+
+ul li::before {
+	color: #ff79c6;
+	position: absolute;
+	left: -18px;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(30px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes float {
+	0%, 100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-10px);
+	}
+}
+
+@media (max-width: 768px) {
+	.kiri, .kanan {
+		width: 100%;
+		float: none;
+		text-align: center;
+	}
+
+	.kanan {
+		margin-top: 20px;
+	}
+
+	table th, table td {
+		font-size: 14px;
+	}
+}
